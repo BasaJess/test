@@ -7,6 +7,10 @@ v3 = 2*v
 print (v2)
 print(v3)
 
+lambdas, V = np.linalg.eig(A)
+print("lambdas: ",lambdas)
+print("V:",V)
+
 import matplotlib.pyplot as plt
 def plot_vectors(vectors, colors):
     """
