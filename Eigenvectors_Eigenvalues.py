@@ -36,7 +36,7 @@ def plot_vectors(vectors, colors):
                    angles='xy', scale_units='xy', scale=1, color=colors[i],)
 
 
-plot_vectors([v, Ev, Fv], ['lightblue', 'blue', 'blue'])
+plot_vectors([v, Ev, Fv], ['lightblue', 'blue', 'darkblue'])
 plt.xlim(-1, 5)
 _ = plt.ylim(-3, 3)
 
