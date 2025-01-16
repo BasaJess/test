@@ -1,6 +1,6 @@
 import numpy as np
 v=np.array([2,2])
-A=np.array([[-1,2],[4,-2]])
+A=np.array([[-1,4],[2,-2]])
 Lam = 2
 v2=np.dot(v,A)
 v3 = 2*v
