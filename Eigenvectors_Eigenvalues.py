@@ -2,6 +2,9 @@ import numpy as np
 v = np.array([3, 1])
 E = np.array([[1, 0], [0, -1]])
 Ev = np.dot(E, v)
+F = np.array([[-1, 0], [0, 1]])
+Fv = np.dot(F, v)
+
 import matplotlib.pyplot as plt
 def plot_vectors(vectors, colors):
     """
@@ -33,7 +36,7 @@ def plot_vectors(vectors, colors):
                    angles='xy', scale_units='xy', scale=1, color=colors[i],)
 
 
-plot_vectors([v, Ev], ['lightblue', 'blue'])
+plot_vectors([v, Ev, Fv], ['lightblue', 'blue', 'blue'])
 plt.xlim(-1, 5)
 _ = plt.ylim(-3, 3)
 
