@@ -1,16 +1,16 @@
 import numpy as np
-NotEigenV=np.array([-3,-3])
-Eigenv1=np.array([0.860111,-0.76454])
-Eigenv2=np.array([0.51010,0.64456])
+NotEigenV=np.array([-1,-1])
+Eigenv1=np.array([0.86011126,0.51010647])
+Eigenv2=np.array([-0.76454754,0.64456735])
 A=np.array([[-1,4],[2,-2]])
 Lam1 = 2
 Lam2 = 2
 NotEigenVTr=np.dot(NotEigenV,A)
-Eigenv1Tr=np.dot(Eigenv1,A)
-Eigenv2Tr=np.dot(Eigenv2,A)
-v4 = Lam2
-print (Eigenv1Tr)
-print(Eigenv2Tr)
+Eigenv1Tr=np.dot(A,Eigenv1)
+Eigenv2Tr=np.dot(A,Eigenv2)
+
+print ("A*Eigenv1: ",Eigenv1Tr)
+print("Lambda*Eigenv1:","1.37228132")
 
 lambdas, V = np.linalg.eig(A)
 print("lambdas: ",lambdas)
@@ -53,7 +53,5 @@ _ = plt.ylim(-4, 5)
 
 plt.show()
 
-lambdas, V = np.linalg.eig(A)
-print("lambdas: ",lambdas)
-print("V:",V)
+
 
