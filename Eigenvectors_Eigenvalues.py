@@ -37,7 +37,7 @@ def plot_vectors(vectors, colors):
 
 
 plot_vectors([v, Ev, Fv], ['lightblue', 'blue', 'darkblue'])
-plt.xlim(-1, 5)
+plt.xlim(-4, 5)
 _ = plt.ylim(-3, 3)
 
 plt.show()
