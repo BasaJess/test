@@ -1,11 +1,16 @@
 import numpy as np
-v=np.array([2,2])
+NotEigenV=np.array([1,1])
+Eigenv1=np.array([0.860111,-0.76454])
+Eigenv2=np.array([0.51010,0.64456])
 A=np.array([[-1,4],[2,-2]])
-Lam = 2
-v2=np.dot(v,A)
-v3 = 2*v
-print (v2)
-print(v3)
+Lam1 = 2
+Lam2 = 2
+NotEigenVTr=np.dot(NotEigenV,A)
+Eigenv1Tr=np.dot(Eigenv1,A)
+Eigenv2Tr=np.dot(Eigenv2,A)
+v4 = Lam2
+print (Eigenv1Tr)
+print(Eigenv2Tr)
 
 lambdas, V = np.linalg.eig(A)
 print("lambdas: ",lambdas)
@@ -42,7 +47,7 @@ def plot_vectors(vectors, colors):
                    angles='xy', scale_units='xy', scale=1, color=colors[i],)
 
 
-plot_vectors([v,v2,v3], ['lightblue', 'blue','red'])
+plot_vectors([NotEigenV,NotEigenVTr,Eigenv1,Eigenv1Tr,Eigenv2,Eigenv2Tr], ['grey','black','lightblue', 'blue','orange','red'])
 plt.xlim(-4, 5)
 _ = plt.ylim(-4, 5)
 
