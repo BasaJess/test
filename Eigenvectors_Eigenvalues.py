@@ -1,3 +1,4 @@
+import numpy as np
 v = np.array([3, 1])
 import matplotlib.pyplot as plt
 def plot_vectors(vectors, colors):
