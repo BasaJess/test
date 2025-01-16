@@ -54,4 +54,6 @@ _ = plt.ylim(-4, 5)
 plt.show()
 
 
+print("V[:,0] ",V[:,0])
+
 
