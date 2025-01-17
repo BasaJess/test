@@ -56,4 +56,22 @@ plt.show()
 
 print("V[:,0] ",V[:,0])
 
+print("---------------------Using Torch--------------------------")
+import torch
 
+print ("A: ",A)
+A_p = torch.tensor([[-1, 4], [2, -2.]]) # must be float for PyTorch eig()
+print ("A_P:",A_p)
+lambdas_cplx, V_cplx = torch.linalg.eig(A_p) # outputs complex numbers because real matrices can have complex eigenvectors
+print("V_cplx:",V_cplx) # complex-typed values with "0.j" imaginary part are in fact real numbers
+V_p = V_cplx.float()
+print("V_p: ",V_p)
+v_p = V_p[:,0]
+print("v_p:",v_p)
+lambdas_p = lambdas_cplx.float()
+print("lambdas_p",lambdas_p)
+lambda_p = lambdas_p[0]
+print("lambda_p",lambda_p)
+Av_p = torch.matmul(A_p, v_p) # matmul() expects float-typed tensors
+print("Av_p: ",Av_p)
+print("lambda_p * vp= ",lambda_p * v_p)
