@@ -56,6 +56,8 @@ plt.show()
 
 print("V[:,0] ",V[:,0])
 
+print("V[:,0] ",V[:,0])
+
 print("---------------------Using Torch--------------------------")
 import torch
 
