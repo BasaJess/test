@@ -32,3 +32,6 @@ for i in [2, 4, 8, 16, 32, 64]:
     title = "n = %s" % i
     plt.title(title)
     plt.show()
+
+#comparing:
+print("imgmat.shape",imgmat.shape)
