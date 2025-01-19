@@ -35,3 +35,8 @@ for i in [2, 4, 8, 16, 32, 64]:
 
 #comparing:
 print("imgmat.shape",imgmat.shape)
+full_representation =  imgmat.shape[0]*imgmat.shape[1]
+print("full_representation= ",full_representation)
+svd64_rep = 64*imgmat.shape[0] + 64 + 64*imgmat.shape[1]
+print("svd64_r =",svd64_rep)
+print("svd64_rep/full_representation =", svd64_rep/full_representation)
